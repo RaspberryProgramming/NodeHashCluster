@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src='/socket.io/socket.io.js'></script>
+    <link rel="stylesheet" type="text/css" href="/site.css" />
+    <script src="/topbar.js"></script>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+
+<body>
+    <div class="topbar">
+        <button onclick="toggle();" class="button">
+            <div class="buttontext">Toggle</div>
+        </button>
+        <div class="pages" id="pages">
+            <button onclick="window.location.href = '/';" class="button">
+                <div class="buttontext">Stats Page</div>
+            </button>
+            <button onclick="window.location.href = '/slave.html';" class="button">
+                <div class="buttontext">Run Slave Workload</div>
+            </button>
+            <button onclick="window.location.href = '/submit.html';" class="button">
+                <div class="buttontext">Submit Hash</div>
+            </button>
+            <button onclick="window.location.href = '/terminology.html';" class="button">
+                <div class="buttontext">Terminology</div>
+            </button>
+        </div>
+        <div>
+            <div class="textbox">
+                <div class="term">Hash/Second</div>
+                <div class="info">
+                    Refers to how many hashes a computer can generate in a second.</div>
+            </div>
+            <div class="textbox">
+                <div class="term">Average Hash/Second</div>
+                <div class="info">
+                    Based on how long it takes to send, and receive each workload from clients. This may be thrown off
+                    by
+                    slaves that have slow connections or slow computers.</div>
+            </div>
+
+</body>
+
+</html>

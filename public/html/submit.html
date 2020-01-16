@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src='/socket.io/socket.io.js'></script>
+    <link rel="stylesheet" type="text/css" href="/site.css" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="/topbar.js"></script>
+    <script src="/submit.js"></script>
+</head>
+
+<body>
+    <div class="topbar">
+        <button onclick="toggle();" class="button">
+            <div class="buttontext">Toggle</div>
+        </button>
+        <div class="pages" id="pages">
+            <button onclick="window.location.href = '/';" class="button">
+                <div class="buttontext">Stats Page</div>
+            </button>
+            <button onclick="window.location.href = '/slave.html';" class="button">
+                <div class="buttontext">Run Slave Workload</div>
+            </button>
+            <button onclick="window.location.href = '/submit.html';" class="button">
+                <div class="buttontext">Submit Hash</div>
+            </button>
+            <button onclick="window.location.href = '/terminology.html';" class="button">
+                <div class="buttontext">Terminology</div>
+            </button>
+        </div>
+    </div>
+    <div class="statbox">
+        <div class="stat-title">Enter SHA256 hash Below</div>
+        <FORM NAME="myform" ACTION="" METHOD="GET">
+            <INPUT TYPE="text" NAME="hash" VALUE="" />
+
+            <OUTPUT TYPE="text" NAME="output" VALUE="Success/Failure" />
+            <INPUT class="button" TYPE="button" NAME="submit" Value="submit" onClick="submitHash(this.form.hash)" />
+    </div>
+    </FORM>
+</body>
+
+</html>

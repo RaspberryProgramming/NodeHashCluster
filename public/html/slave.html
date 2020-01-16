@@ -1,0 +1,41 @@
+<!DOCTYPE "text/html">
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.8.2/forge.all.min.js"></script>
+    <script type="text/javascript" src="sha256.js"></script>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src="/slave.js"></script>
+    <script src="/topbar.js"></script>
+    <link rel="stylesheet" type="text/css" href="/site.css" />
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+
+<body>
+    <div class="topbar">
+        <button onclick="toggle();" class="button">
+            <div class="buttontext">Toggle</div>
+        </button>
+        <div class="pages" id="pages">
+            <button onclick="window.location.href = '/';" class="button">
+                <div class="buttontext">Stats Page</div>
+            </button>
+            <button onclick="window.location.href = '/slave.html';" class="button">
+                <div class="buttontext">Run Slave Workload</div>
+            </button>
+            <button onclick="window.location.href = '/submit.html';" class="button">
+                <div class="buttontext">Submit Hash</div>
+            </button>
+            <button onclick="window.location.href = '/terminology.html';" class="button">
+                <div class="buttontext">Terminology</div>
+            </button>
+        </div>
+    </div>
+    <div id="status" class="status">
+        <p>Loading scipt...</p>
+    </div>
+</body>
+
+</html>

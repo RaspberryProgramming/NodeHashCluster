@@ -1,0 +1,84 @@
+<!DOCTYPE "text/html">
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/site.css" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/topbar.js"></script>
+    <script src="/hashdisplay.js"></script>
+</head>
+
+<body>
+    <div class="topbar">
+        <button onclick="toggle();" class="button">
+            <div class="buttontext">Toggle</div>
+        </button>
+        <div class="pages" id="pages">
+            <button onclick="window.location.href = '/';" class="button">
+                <div class="buttontext">Stats Page</div>
+            </button>
+            <button onclick="window.location.href = '/slave.html';" class="button">
+                <div class="buttontext">Run Slave Workload</div>
+            </button>
+            <button onclick="window.location.href = '/submit.html';" class="button">
+                <div class="buttontext">Submit Hash</div>
+            </button>
+            <button onclick="window.location.href = '/terminology.html';" class="button">
+                <div class="buttontext">Terminology</div>
+            </button>
+        </div>
+    </div>
+    <div>
+        <div class="statbox-static">
+            <div class="stat-title">Total Cluster Speed</div>
+            <div id="spd" class="stat">0</div>
+            <div class="stattext">Hash/Second</div>
+        </div>
+    </div>
+    <div>
+        <div class="statbox-static">
+            <div class="stat-title">Current Level</div>
+            <div id="currlev" class="stat">0</div>
+            <div class="stattext">Level</div>
+        </div>
+    </div>
+    <div>
+        <div class="statbox-variable">
+            <div class="stat-title">Current Hash</div>
+            <div id="curhash" class="stat"></div>
+        </div>
+    </div>
+    <div>
+        <h1>Cracked Hashes:</h1>
+        <div class="list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hash</th>
+                        <th>Plaintext</th>
+                    </tr>
+                </thead>
+                <tbody id="foundHashes">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <h1>Queued Hashes:</h1>
+        <div class="list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hash</th>
+                    </tr>
+                </thead>
+                <tbody id="queue">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

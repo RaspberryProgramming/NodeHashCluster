@@ -1,0 +1,135 @@
+.topbar {
+    background-color: #0f2862;
+    display: block;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.pages {
+    position: relative;
+    display: none;
+}
+
+.textbox {
+    display: inline-block;
+    background-color: #0f2862;
+    color: lightgray;
+    margin: 10px;
+    border-radius: 10px;
+    max-width: 75%;
+    float: none;
+    padding: 10px;
+}
+
+.status {
+    margin: 10px;
+}
+
+.statbox-static {
+    width: 20rem;
+    margin: 2rem;
+    border-style: solid;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.statbox-variable {
+    max-width: 75%;
+    margin: 2rem;
+    border-style: solid;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.stattext {
+    float: right;
+}
+
+.stat {
+    float: left;
+}
+
+div {
+    text-align: center;
+    padding: 10px;
+}
+
+.button {
+
+    margin: 5px;
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+    background-image: linear-gradient(#185291, #091f36);
+    border-style: none;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-image: linear-gradient(#091f36, #185291);
+}
+
+form {
+    text-align: center;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+    background: #091f36;
+}
+
+.list {
+    display: inline-block;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    text-align: center;
+    border: solid thin;
+    border-color: white;
+    border-style: solid;
+    color: white;
+}
+
+th {
+    margin: 10px;
+    overflow: auto;
+    padding: 5px;
+    border-radius: 5px;
+    width: 4rem;
+    height: 2rem;
+    background-color: #0f2862;
+    text-align: center;
+}
+
+td {
+    width: auto;
+    margin: 10px;
+    overflow: auto;
+    padding: 5px;
+    background-color: #4d5fb8;
+    border-radius: 5px;
+    text-align: center;
+    border: solid thin;
+    border-color: white;
+    border-style: solid;
+    color: white;
+}
+
+.stat-title {
+    box-shadow: 0 0 5px #58a8dd;
+    background-color: #4d5fb8;
+    border-radius: 5px;
+}
+
+.list {
+    overflow: auto;
+    display: inline-block;
+    max-width: 100%;
+}
