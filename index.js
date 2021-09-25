@@ -81,6 +81,15 @@ slaves.sync();
 logs.sync();
 
 // Needed functions
+
+function generateAscii() {
+  let output = [];
+  for (let i = 32; i < 126; i++){
+    output.push(String.fromCharCode(i));
+  }
+  return output;
+}
+
 async function log(info) {
   /**
    * receives a log, stores it to the database, and prints it to the display
@@ -154,9 +163,9 @@ async function loadtables() {
   } else {
     global.settings = {
       loadTimeout: 60, // Seconds
-      blockSize: 16384, // size of each workload to send slaves
+      blockSize: 131072, // size of each workload to send slaves
       start: 0,
-      stop: 16384,
+      stop: 131072,
     };
     updatesettings();
   }
@@ -191,35 +200,7 @@ global.work = {
   hash: "",
   currentCount: 0,
   loads: {},
-  chars: [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-  ],
+  chars: generateAscii(),
   averageSpeed: 0,
 };
 
@@ -262,7 +243,7 @@ io.on("connection", socket => {
         io.emit("start", "");
       } else {
         // global.work.hashQueue.push(msg.hash);
-        queue.create({ hash: msg.hash, submitDate: Date.now() });
+        queue.create({ hash: msg.hash.toLowerCase(), submitDate: Date.now() });
       }
       log(`Hash ${msg.hash} enqueued`);
     }
