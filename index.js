@@ -229,23 +229,28 @@ io.on("connection", socket => {
     socket.emit("sync", { finishQueue: finishQueue, hashQueue: hashQueue });
   });
   socket.on("hashSubmit", async function(msg) {
+    let hash = msg.hash.toLowerCase();
+
     let count = await finished
-      .count({ where: { hash: msg.hash } })
+      .count({ where: { hash: hash } })
       .then(count => {
         return count;
       });
-    console.log(count);
+
     if (count === 0) {
       if (global.work.hash === "") {
+        
         console.log(msg);
-        global.work.hash = msg.hash;
-        queue.create({ hash: msg.hash, submitDate: Date.now() });
+        console.log(hash);
+
+        global.work.hash = hash;
+        queue.create({ hash: hash, submitDate: Date.now() });
         io.emit("start", "");
       } else {
         // global.work.hashQueue.push(msg.hash);
-        queue.create({ hash: msg.hash.toLowerCase(), submitDate: Date.now() });
+        queue.create({ hash: hash, submitDate: Date.now() });
       }
-      log(`Hash ${msg.hash} enqueued`);
+      log(`Hash ${hash} enqueued`);
     }
   });
   socket.on("requestID", message => {
