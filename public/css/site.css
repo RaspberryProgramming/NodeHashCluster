@@ -1,13 +1,14 @@
 .topbar {
-    background-color: #0f2862;
+    background-color: #5F3F8F;
     display: block;
-    padding-right: 20px;
     text-align: left;
+    padding:0;
 }
 
 .pages {
     position: relative;
     display: none;
+    padding:0;
 }
 
 .textbox {
@@ -32,7 +33,7 @@
     text-align: center;
     display: inline-block;
     border-radius: 5px;
-    padding: 5px;
+    padding:0;
 }
 
 .statbox-variable {
@@ -42,7 +43,7 @@
     text-align: center;
     display: inline-block;
     border-radius: 5px;
-    padding: 5px;
+    padding: 0;
 }
 
 .stattext {
@@ -59,17 +60,15 @@ div {
 }
 
 .button {
-
-    margin: 5px;
+    padding:10px;
     font-family: "Ubuntu", sans-serif;
     color: white;
-    background-image: linear-gradient(#185291, #091f36);
     border-style: none;
-    border-radius: 10px;
+    background-color: #683F97;
 }
 
 .button:hover {
-    background-image: linear-gradient(#091f36, #185291);
+    background-color: #8d5fb8;
 }
 
 form {
@@ -79,7 +78,8 @@ form {
 body {
     font-family: "Ubuntu", sans-serif;
     color: white;
-    background: #091f36;
+    background: #591f86;
+    margin:0;
 }
 
 .list {
@@ -95,16 +95,15 @@ table {
     border-color: white;
     border-style: solid;
     color: white;
+    padding:0;
 }
 
 th {
-    margin: 10px;
     overflow: auto;
     padding: 5px;
-    border-radius: 5px;
     width: 4rem;
     height: 2rem;
-    background-color: #0f2862;
+    background-color: #390f56;
     text-align: center;
 }
 
@@ -113,7 +112,7 @@ td {
     margin: 10px;
     overflow: auto;
     padding: 5px;
-    background-color: #4d5fb8;
+    background-color: #591f86;
     border-radius: 5px;
     text-align: center;
     border: solid thin;
@@ -123,9 +122,7 @@ td {
 }
 
 .stat-title {
-    box-shadow: 0 0 5px #58a8dd;
-    background-color: #4d5fb8;
-    border-radius: 5px;
+    background-color: #8d5fb8;
 }
 
 .list {
