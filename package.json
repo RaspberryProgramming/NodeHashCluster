@@ -15,11 +15,11 @@
     "microtime": "^3.0.0",
     "node": "^17.4.0",
     "sequelize": "^5.21.2",
-    "socket.io": "^4.4.1",
-    "sqlite3": "^4.2.0"
+    "socket.io": "^4.4.1"
   },
   "devDependencies": {
     "eslint": "^8.9.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "sqlite3": "^5.0.2"
   }
 }

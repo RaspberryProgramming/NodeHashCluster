@@ -1,0 +1,25 @@
+.InfoBox {
+    display: flex;
+    flex-direction:column;
+    width: 15rem;
+    border-radius: 2px;
+    background-color: #46B774;
+
+}
+
+.InfoBox .title {
+    padding: 5px;
+    color:white;
+}
+
+.InfoBox .stats {
+    padding: 5px;
+    display:flex;
+    flex-direction: row;
+    background-color: #46D794;
+    justify-content: center
+}
+
+.InfoBox .stats.w-measure {
+    justify-content: space-between;
+}
